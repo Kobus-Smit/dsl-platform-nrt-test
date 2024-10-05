@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSL-Platform-NRT-Test", "DSL-Platform-NRT-Test.csproj", "{E9B2B3B8-4FDF-46C2-96E5-91D3739E3F6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9B2B3B8-4FDF-46C2-96E5-91D3739E3F6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9B2B3B8-4FDF-46C2-96E5-91D3739E3F6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9B2B3B8-4FDF-46C2-96E5-91D3739E3F6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9B2B3B8-4FDF-46C2-96E5-91D3739E3F6E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E99CF28E-AC93-474A-AE6E-CD0849C0CE2C}
+	EndGlobalSection
+	GlobalSection(DslPlatformSolutionProperties) = preSolution
+		Postgres.ConnectionString = server=localhost;port=5432;database=my-app;user=postgres;password=postgres;encoding=unicode
+		Postgres.SqlScriptsPath = Back-end\Database\Migration
+		Postgres.ConfirmUnsafe = True
+		Poco.Compile = True
+		Poco.Name = MyApp.DSL
+		Poco.Target = Common\Lib
+		Poco.Dependencies = Common\Lib
+		Poco.UseUtc = True
+		Poco.MutableSnowflake = True
+		Poco.NullableReferences = True
+		Client.Compile = True
+		Client.Name = MyApp.DSL
+		Client.Target = Front-end\Lib\Revenj
+		Client.Dependencies = Front-end\Lib\Revenj
+		Client.Nugets = revenj.client:0.9.0;Microsoft.CSharp:4.7.0
+		Client.ActiveRecord = False
+		Client.HelperMethods = False
+		Client.UseUtc = True
+		Client.MutableSnowflake = True
+		Client.NullableReferences = True
+		Portable.Target = Client\lib
+		Portable.Dependencies = Client\Revenj.Client.Portable\bin\Release
+		Wpf.Name = ClimateRiskSystem.Client.Model.WPF
+		Wpf.Target = Front-end\Lib\
+		Wpf.Dependencies = Front-end\Lib\Revenj\WPF
+		Postgres.Compile = True
+		Postgres.BuildType = DotNetStandard
+		Postgres.Name = MyApp.DSL
+		Postgres.Target = Back-end\Lib\Revenj\Postgres
+		Postgres.Dependencies = Back-end\Lib\Revenj\Postgres
+		Postgres.Nugets = revenj:1.6.5;System.Drawing.Common:8.0.8
+		Postgres.UseUtc = True
+		Postgres.NoPrepareExecute = True
+		Postgres.MutableSnowflake = True
+		Postgres.NullableReferences = True
+	EndGlobalSection
+EndGlobal
